@@ -10,9 +10,10 @@ import { MaterilModule } from './shared/materil/materil.module';
 
 
 const routes:Routes=[
+  {path:'auth',loadChildren:'./auth/auth.module#AuthModule'},
   {path:'demo',loadChildren:'./demo/demo.module#DemoModule'},
   {path:'login',component:LoginComponent},
-  {path:'**',redirectTo:'login',pathMatch:'full'}
+  {path:'**',redirectTo:'auth'}
 ]
 
 @NgModule({
